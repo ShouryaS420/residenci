@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none !important;
+  list-style: none !important;
+}
+a {
+  text-decoration: none !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.flexContent {
+  width: 100%;
+  display: flex;
+}
+.flexContent .css-1d2ugx5 {
+  width: 16%;
+  margin-right: 10px;
+  background: #fff;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.1);
+  height: 100vh;
+  padding: 14px 20px 0px 20px;
+}
+.flexContent .css-1d2ugx5 .css-dvxtzn {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.flexContent .css-1d2ugx5 .css-dvxtzn svg {
+  width: 200px;
+}
+.flexContent .css-1d2ugx5 .chakra-stack .css-89x3gd .css-1lads1q {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.flexContent .css-1d2ugx5 .chakra-stack .css-89x3gd .css-1lads1q .css-1ep1x53 {
+  color: #422AFB;
+  margin-inline-end: 18px;
+}
+.flexContent .css-1d2ugx5 .chakra-stack .css-89x3gd .css-1lads1q .css-1ep1x53 .css-18176s2 {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  line-height: 1em;
+  flex-shrink: 0;
+  color: inherit;
+  margin-top: 2px;
+}
+.flexContent .css-1d2ugx5 .chakra-stack .css-89x3gd .css-1lads1q .css-zgydab {
+  margin-inline-end: auto;
+  color: #2D3748;
+  font-weight: 700;
+}
+.css-1kp8h9s {
+  display: flex;
+  align-items: center;
+}
+
+/* active */
+.css-12lt4rz {
+  color: #8F9BBA;
+  margin-inline-end: 18px;
+}
+.css-18176s2 {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  line-height: 1em;
+  flex-shrink: 0;
+  color: inherit;
+  margin-top: 2px;
+}
+.css-1aqgb0d {
+  margin-inline-end: auto;
+  color: #8F9BBA;
+  font-weight: 400;
+}
+
+.css-178v8zz > :not(style) ~ :not(style) {
+  margin-top: 0px;
+  margin-inline: 26px 0px;
+  margin-bottom: 0px;
+}
+.css-nzz1ww {
+  height: 36px;
+  width: 4px;
+  background: transparent;
+  border-radius: 5px;
+}
+
+.css-1kp8h9s > :not(style) ~ :not(style) {
+  margin-top: 0px;
+  margin-inline: 22px 0px;
+  margin-bottom: 0px;
+}
+.css-j3id07 {
+  height: 36px;
+  width: 4px;
+  background: #422AFB;
+  border-radius: 5px;
+}
+.css-zgydab {
+  margin-inline-end: auto;
+  color: #2D3748;
+  font-weight: 700;
+}
