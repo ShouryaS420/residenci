@@ -11,7 +11,7 @@ export default function SearchDetails() {
     const [trendingProjects1, setTrendingProjects1] = useState([]);
 
     const fetchData1 = () => {
-        return fetch("http://82.180.136.42/api/projects/fetchDetailsBySearchLocality")
+        return fetch("http://82.180.136.42:5000/api/projects/fetchDetailsBySearchLocality")
             .then((response) => response.json())
             .then((data) => setTrendingProjects1(data));
     }
@@ -34,7 +34,7 @@ export default function SearchDetails() {
     const handleClick = async (e) => {
         e.preventDefault();
         const {name, email, mobile} = credentials;
-        const response = await fetch("http://82.180.136.42/api/visit/siteVisit", {
+        const response = await fetch("http://82.180.136.42:5000/api/visit/siteVisit", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

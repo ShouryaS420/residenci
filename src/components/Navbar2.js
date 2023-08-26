@@ -112,7 +112,7 @@ function Navbar() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get('http://82.180.136.42/api/projects/api/count', {
+                const response = await axios.get('http://82.180.136.42:5000/api/projects/api/count', {
                     params: { fieldName: 'save', fieldValue: 'yes' },
                 });
         
@@ -135,7 +135,7 @@ function Navbar() {
         setOpen(false);
 
         // fetch data
-        fetch("http://82.180.136.42/api/projects/fetchDetailsBySearchLocality")
+        fetch("http://82.180.136.42:5000/api/projects/fetchDetailsBySearchLocality")
         .then((response) => {
             return response.json();
         })

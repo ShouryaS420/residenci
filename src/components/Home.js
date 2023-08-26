@@ -74,7 +74,7 @@ function Home(props) {
         setOpen(false);
 
         // fetch data
-        fetch("http://localhost:5000/api/projects/fetchDetailsBySearchLocality")
+        fetch("http://82.180.136.42:5000/api/projects/fetchDetailsBySearchLocality")
         .then((response) => {
             return response.json();
         })

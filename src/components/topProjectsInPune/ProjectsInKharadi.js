@@ -25,7 +25,7 @@ export default function ProjectsInKharadi() {
     const [trendingProjects, setTrendingProjects] = useState([]);
 
     const fetchData = () => {
-        return fetch("http://localhost:5000/api/projects/fetchDetailsBySearchLocality")
+        return fetch("http://82.180.136.42:5000/api/projects/fetchDetailsBySearchLocality")
             .then((response) => response.json())
             .then((data) => setTrendingProjects(data));
     }
