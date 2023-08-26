@@ -31,7 +31,7 @@ export default function TrendingProjectsCarousel() {
     const [trendingProjects, setTrendingProjects] = useState([]);
 
     const fetchData = () => {
-        return fetch("http://localhost:5000/api/projects/fetchAllTrendingProjectDetails")
+        return fetch("http://82.180.136.42/api/projects/fetchAllTrendingProjectDetails")
             .then((response) => response.json())
             .then((data) => setTrendingProjects(data));
     }
@@ -45,7 +45,7 @@ export default function TrendingProjectsCarousel() {
         // useEffect(() => {
         // const fetchProjectVariants = async () => {
         //     try {
-        //     const response = await axios.get(`http://localhost:5000/api/projects/fetchProjectVariantByProjectID/${id}/variant`); // Replace with your backend API endpoint
+        //     const response = await axios.get(`http://82.180.136.42/api/projects/fetchProjectVariantByProjectID/${id}/variant`); // Replace with your backend API endpoint
         //     setProjectVariants(response.data);
         //     } catch (err) {
         //     console.error(err);

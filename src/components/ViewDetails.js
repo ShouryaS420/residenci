@@ -42,7 +42,7 @@ export default function ViewDetails() {
     const [trendingProjects, setTrendingProjects] = useState([]);
 
     const fetchData = () => {
-        return fetch("http://localhost:5000/api/projects/fetchDetailsBySearchLocality")
+        return fetch("http://82.180.136.42/api/projects/fetchDetailsBySearchLocality")
             .then((response) => response.json())
             .then((data) => setTrendingProjects(data));
     }
@@ -73,7 +73,7 @@ export default function ViewDetails() {
     const handleClick = async (e) => {
         e.preventDefault();
         const {name, email, mobile} = credentials;
-        const response = await fetch("http://localhost:5000/api/visit/siteVisit", {
+        const response = await fetch("http://82.180.136.42/api/visit/siteVisit", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -105,7 +105,7 @@ export default function ViewDetails() {
         useEffect(() => {
             const fetchProjectLocality = async () => {
                 try {
-                const response = await axios.get(`http://localhost:5000/api/projects/fetchProjectNearbyLocalityByProjectID/${id}/locality`); // Replace with your backend API endpoint
+                const response = await axios.get(`http://82.180.136.42/api/projects/fetchProjectNearbyLocalityByProjectID/${id}/locality`); // Replace with your backend API endpoint
                 setProjectLocality(response.data);
                 } catch (err) {
                 console.error(err);
@@ -121,7 +121,7 @@ export default function ViewDetails() {
         useEffect(() => {
             const fetchProjectVariants = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:5000/api/projects/fetchProjectVariantByProjectID/${id}/variant`); // Replace with your backend API endpoint
+                    const response = await axios.get(`http://82.180.136.42/api/projects/fetchProjectVariantByProjectID/${id}/variant`); // Replace with your backend API endpoint
                     setProjectVariants(response.data);
                 } catch (err) {
                     console.error(err);
@@ -137,7 +137,7 @@ export default function ViewDetails() {
         useEffect(() => {
         const fetchProjectAmenities = async () => {
             try {
-            const response = await axios.get(`http://localhost:5000/api/projects/fetchProjectAmenitiesByProjectID/${id}/amenities`); // Replace with your backend API endpoint
+            const response = await axios.get(`http://82.180.136.42/api/projects/fetchProjectAmenitiesByProjectID/${id}/amenities`); // Replace with your backend API endpoint
             setProjectAmenities(response.data);
             } catch (err) {
             console.error(err);
@@ -161,7 +161,7 @@ export default function ViewDetails() {
         const fetchData = async () => {
             try {
             // Fetch builder data by builderID
-            const response = await axios.get(`http://localhost:5000/api/projects/fetchProjectDeveloper/${builderID}`); // Replace 12345 with the actual builderID you want to fetch
+            const response = await axios.get(`http://82.180.136.42/api/projects/fetchProjectDeveloper/${builderID}`); // Replace 12345 with the actual builderID you want to fetch
             setBuilder(response.data);
             } catch (error) {
             console.error(error);
@@ -179,7 +179,7 @@ export default function ViewDetails() {
         useEffect(() => {
             const fetchProject = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:5000/api/projects/fetchProjectDetailsByID/${id}`); // Replace with your backend API endpoint
+                    const response = await axios.get(`http://82.180.136.42/api/projects/fetchProjectDetailsByID/${id}`); // Replace with your backend API endpoint
                     setProject(response.data);
                 } catch (err) {
                     console.error(err);
@@ -201,7 +201,7 @@ export default function ViewDetails() {
 
     const updateField = async () => {
         try {
-            const response = await axios.put('http://localhost:5000/api/projects/update', {
+            const response = await axios.put('http://82.180.136.42/api/projects/update', {
                 id,
                 mobile,
                 save,
@@ -214,7 +214,7 @@ export default function ViewDetails() {
     };
     const updateField2 = async () => {
         try {
-            const response = await axios.put('http://localhost:5000/api/projects/update2', {
+            const response = await axios.put('http://82.180.136.42/api/projects/update2', {
                 id,
                 mobile2,
                 save2,

@@ -98,7 +98,7 @@ function Navbar() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get('http://localhost:5000/api/projects/api/count', {
+                const response = await axios.get('http://82.180.136.42/api/projects/api/count', {
                     params: { fieldName: 'save', fieldValue: 'yes' },
                 });
         
