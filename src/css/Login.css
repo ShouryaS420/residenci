@@ -1,0 +1,249 @@
+.topBg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+}
+.topBg img {
+    width: 100%;
+    min-height: 100vh;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+.loginBox .row {
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    min-height: 100vh;
+}
+.loginBox .formBox {
+    padding: 20px;
+    background: #fff;
+    width: 440px;
+    height: 480px;
+    position: relative;
+    right: 15px;
+    top: 0;
+    float: right;
+    border-radius: 8px;
+    box-shadow: 0 -4px 43px 0 rgb(0 0 0 / 11%);
+    align-items: center;
+    justify-content: center;
+    display: inline-table;
+}
+.loginBox .headingBox {
+    display: flex;
+    overflow: hidden;
+}
+.loginBox .headingBox h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 22px;
+    color: #333;
+    display: inline-block;
+}
+.loginBox .formBox figure {
+    display: block;
+    text-align: center;
+    margin: auto;
+    min-height: 122px;
+    margin-top: 4rem;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+.loginBox .formBox .input-group {
+    display: flex;
+    display: -webkit-flex;
+    background: #fff;
+}
+.countryDropdownPosition {
+    position: relative;
+}
+.countryDropdown {
+    position: absolute;
+    content: "";
+    top: 50px;
+    display: none;
+}
+.countryDropdown ul {
+    padding: 0;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 20%);
+    background: #fff;
+    position: absolute;
+    z-index: 2;
+    list-style: none;
+    text-align: left;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    max-height: 196px;
+    width: 250px;
+    overflow: auto;
+    font-family: Arial;
+}
+.selectCountry {
+    padding: 0 15px;
+    border-radius: 8px 0 0 8px;
+    border-right: 0;
+    width: 87px;
+    height: 50px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-right: 0;
+    cursor: pointer;
+}
+.selectCountry::after {
+    content: "\e919";
+    font-family: icomoon;
+    font-size: 10px;
+    color: #333;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    z-index: 1;
+    font-weight: 700;
+}
+.selectCountry img {
+    float: left;
+}
+.selectCountry img {
+    float: left;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+.countrycode {
+    display: flex;
+    border: 1px solid #ccc;
+    width: calc(100% - 87px);
+    border-radius: 0 8px 8px 0;
+    position: relative;
+    height: 50px;
+}
+.countrycode span {
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+.loginBox .formBox .input-group [type="tel"] {
+    border-radius: 0 8px 8px 0;
+    height: 50px;
+    font-size: 16px;
+}
+.countrycode .form-control {
+    padding-left: 0;
+    border: 0;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+    background: 0 0;
+    top: -1px;
+    z-index: 1;
+}
+.form-control {
+    padding: 6px 12px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    color: #333;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none !important;
+    outline: none;
+}
+.loginBox .formBox .btn {
+    width: 100%;
+    font-weight: 600;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.btn-primary {
+    background: #df293a !important;
+    color: #fff;
+    border: #df293a solid 1px !important;;
+}
+.btn {
+    padding: 10px 21px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-size: 13px;
+    line-height: 1.42857143;
+    border-radius: 5px;
+    transition: .5s;
+    padding: 10px 21px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-size: 13px;
+    line-height: 1.42857143;
+    border-radius: 5px;
+}
+.loginBox .formBox p {
+    padding-top: 15px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+}
+.loginBox .formBox p a {
+    color: #df293a;
+}
+.OTP_Input {
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    outline: none;
+    padding: 10px 50px 10px 26px;
+    font-size: 16px;
+    color: rgba(0,0,0,.87);
+    background-color: rgb(255 255 255);
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: .2s;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-right: 0 !important;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.loginBox .formBox .mobile {
+    padding-top: 15px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+}
+.loginBox .formBox .mobile a {
+    color: #df293a;
+}

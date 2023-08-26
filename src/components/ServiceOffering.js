@@ -1,0 +1,73 @@
+import React from 'react';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+export default function ServiceOffering() {
+    const responsive = {
+        desktop1: {
+            breakpoint: { max: 2000, min: 800 },
+            items: 3.8,
+            slidesToSlide: 1 // optional, default to 1.
+        },
+        desktop: {
+            breakpoint: { max: 900, min: 500 },
+            items: 2.5,
+            slidesToSlide: 1 // optional, default to 1.
+        },
+        tablet: {
+            breakpoint: { max: 1400, min: 768 },
+            items: 4,
+            slidesToSlide: 1 // optional, default to 1.
+        },
+        mobile: {
+            breakpoint: { max: 450, min: 100 },
+            items: 1.5,
+            slidesToSlide: 1 // optional, default to 1.
+        }
+    };
+
+    return (
+        <>
+            <div className="carouselCard">
+                <Carousel
+                    swipeable={true}
+                    draggable={true}
+                    showDots={false}
+                    responsive={responsive}
+                    infinite={false}
+                    autoPlay={false}
+                    autoPlaySpeed={1500}
+                    keyBoardControl={true}
+                    transitionDuration={500}
+                    containerClass="carousel-container"
+                    removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+                >
+                    <div className="ServiceOfferingCard">
+                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                    </div>
+                    <div className="ServiceOfferingCard">
+                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                    </div>
+                    <div className="ServiceOfferingCard">
+                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                    </div>
+                    <div className="ServiceOfferingCard">
+                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                    </div>
+                    <div className="ServiceOfferingCard">
+                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                    </div>
+                    <div className="ServiceOfferingCard">
+                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                    </div>
+                    <div className="ServiceOfferingCard">
+                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                    </div>
+                    <div className="ServiceOfferingCard">
+                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                    </div>
+                </Carousel>
+            </div>
+        </>
+    )
+}

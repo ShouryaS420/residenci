@@ -5,9 +5,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  list-style: none !important;
+  text-decoration: none !important;
+}
+
+/* @import url(./css/Navbar.css); */
+/* @import url(./css/Home.css); */
+/* @import url(./css/Login.css); */
+/* @import url(./css/ViewDetails.css); */
+
+.loginBox .formBox .input-group {
+  justify-content: space-around;
+}
+.loginBox .formBox .input-group .otp-container input {
+  width: 32px !important;
+  height: 32px !important;
+  text-align: center !important;
+  margin-right: 10px !important;
+  border-radius: 4px !important;
+  border: 1px solid #000 !important;
+}
+
+.animate-spin {
+  animation: spin 0.3s infinite ease-in-out;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
