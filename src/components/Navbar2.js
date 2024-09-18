@@ -53,7 +53,7 @@ function Navbar() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost/api/convert.php?number=${number}`);
+                const response = await fetch(`https://askresidenci.com/convert.php?number=${number}`);
                 const jsonData = await response.json();
                 setData(jsonData);
             } catch (error) {
@@ -68,7 +68,7 @@ function Navbar() {
     const handleUpdate = (event) => {
         event.preventDefault();
     
-        const url = `http://localhost/api/logout.php?number=${number}`;
+        const url = `https://askresidenci.com/logout.php?number=${number}`;
 
         axios
             .post(url)
@@ -91,7 +91,7 @@ function Navbar() {
         e.preventDefault();
     
         try {
-          const response = await fetch('http://localhost/api/logout.php', {
+          const response = await fetch('https://askresidenci.com/logout.php', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
@@ -112,7 +112,7 @@ function Navbar() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get('http://82.180.136.42:5000/api/projects/api/count', {
+                const response = await axios.get('http://localhost:5000/api/projects/api/count', {
                     params: { fieldName: 'save', fieldValue: 'yes' },
                 });
         
@@ -135,7 +135,7 @@ function Navbar() {
         setOpen(false);
 
         // fetch data
-        fetch("http://82.180.136.42:5000/api/projects/fetchDetailsBySearchLocality")
+        fetch("http://localhost:5000/api/projects/fetchDetailsBySearchLocality")
         .then((response) => {
             return response.json();
         })
@@ -245,7 +245,7 @@ function Navbar() {
                                                             </svg>
                                                         </div>
                                                         <div className="sideMenuAuthButton__contentWrapper">
-                                                            <div className="sideMenuAuthButton__text">{userName.slice(1,-1)}</div>
+                                                            <div className="sideMenuAuthButton__text">{userName}</div>
                                                             <svg class="transform -rotate-90" viewBox="0 0 24 24" color="#999" height="13" width="13" style={{ width: '13px', height: '13px', margin: '2px', transform: 'rotate(270deg)', marginTop: '5px', marginLeft: '4px', }}>
                                                                 <path class="" fill="#fff" d="M16.62,2.99 C16.13,2.5 15.34,2.5 14.85,2.99 L6.54,11.3 C6.15,11.69 6.15,12.32 6.54,12.71 L14.85,21.02 C15.34,21.51 16.13,21.51 16.62,21.02 C17.11,20.53 17.11,19.74 16.62,19.25 L9.38,12 L16.63,4.75 C17.11,4.27 17.11,3.47 16.62,2.99 Z"></path>
                                                             </svg>
@@ -315,7 +315,7 @@ function Navbar() {
                         </Link>
                     </li>
                     <li style={{ display: showHide ? 'block' : 'none' }}>
-                        <Link to="/" className="promoCard" data-cms-id="61129" data-cms-template="cWeb-Properties">
+                        {/* <Link to="/" className="promoCard" data-cms-id="61129" data-cms-template="cWeb-Properties">
                             <div className="promoCard__card promoCard__card--cta">
                                 <div className="homeConstruction">
                                     <img src="/homeConstruction.png" alt="" className="" />
@@ -326,7 +326,7 @@ function Navbar() {
                                     </div>
                                 </div>
                             </div>
-                        </Link>
+                        </Link> */}
                     </li>
                     <li style={{ display: showHide ? 'block' : 'none' }}>
                         {data.slice(0, 1).map((item, index) => {
@@ -342,7 +342,7 @@ function Navbar() {
                                                         </svg>
                                                     </div>
                                                     <div className="sideMenuAuthButton__contentWrapper">
-                                                        <div className="sideMenuAuthButton__text">{userName.slice(1,-1)}</div>
+                                                        <div className="sideMenuAuthButton__text">{userName}</div>
                                                         <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                                                             <path style={{fill: '#000000'}} d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
                                                         </svg>

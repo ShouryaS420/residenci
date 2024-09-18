@@ -7,11 +7,17 @@ import toast, { Toaster } from 'react-hot-toast';
 
 export default function SearchDetails() {
     const { localityURI } = useParams();
+    function convertFirstLetterToLowercase(str) {
+        return str.replace(/\b\w/g, (match) => match.toLowerCase());
+    }
+      
+    const inputString = localityURI;
+    const convertedString = convertFirstLetterToLowercase(inputString);
 
     const [trendingProjects1, setTrendingProjects1] = useState([]);
 
     const fetchData1 = () => {
-        return fetch("http://82.180.136.42:5000/api/projects/fetchDetailsBySearchLocality")
+        return fetch("https://askresidenci.com/getProjectsDetails.php")
             .then((response) => response.json())
             .then((data) => setTrendingProjects1(data));
     }
@@ -34,7 +40,7 @@ export default function SearchDetails() {
     const handleClick = async (e) => {
         e.preventDefault();
         const {name, email, mobile} = credentials;
-        const response = await fetch("http://82.180.136.42:5000/api/visit/siteVisit", {
+        const response = await fetch("http://localhost:5000/api/visit/siteVisit", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -839,7 +845,7 @@ export default function SearchDetails() {
                                 <div className="tfp-m1z8tl">
                                     <div className="tfp-search_detailsFlex" style={{ marginTop: '20px', }}>{}
                                         {trendingProjects1.map((userObj1, index) => {
-                                            if (userObj1.locality === localityURI) {
+                                            if (userObj1.locality === localityURI || userObj1.locality === convertedString) {
                                                 if (budget1.slice(2,10) > userObj1.startPrice || budget2.slice(2,10) < userObj1.EndPrice || budget2.slice(2,10) === userObj1.EndPrice || budget2 === '0') {
                                                     if (bhk0 === '0' || bhk0 === userObj1.BHk.slice(0,1) || bhk1 === userObj1.BHk.slice(2,3) || bhk2 === userObj1.BHk.slice(4,5) || bhk3 === userObj1.BHk.slice(6,7) || bhk4 === userObj1.BHk.slice(8,9)) {
                                                         if (userObj1.possessionDate.slice(0,4) < yearValue || userObj1.possessionDate.slice(0,4) === yearValue || yearValue === '0') {
@@ -868,7 +874,7 @@ export default function SearchDetails() {
                                                                                     </div>
                                                                                     <div className="tfp-search_detailsBtn">
                                                                                         <button className="tfp-aiwj6j1">Contact <i className="fa-solid fa-phone"></i></button>
-                                                                                        <Link to={`/projects/view-details/${userObj1._id}/${userObj1.builderID}`}>
+                                                                                        <Link to={`/projects/view-details/${userObj1.id}/${userObj1.builderID}`}>
                                                                                             <button className="tfp-aiwj6j2">View Details <i className="fa-solid fa-arrow-right"></i></button>
                                                                                         </Link>
                                                                                     </div>

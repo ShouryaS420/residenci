@@ -12,7 +12,7 @@ export default function ShortList() {
     const [trendingProjects, setTrendingProjects] = useState([]);
 
     const fetchData = () => {
-        return fetch("http://82.180.136.42:5000/api/projects/fetchDetailsBySearchLocality")
+        return fetch("http://localhost:5000/api/projects/fetchDetailsBySearchLocality")
             .then((response) => response.json())
             .then((data) => setTrendingProjects(data));
     }
@@ -25,7 +25,7 @@ export default function ShortList() {
         useEffect(() => {
         const fetchProjectVariants = async () => {
             try {
-                const response = await axios.get(`http://82.180.136.42:5000/api/projects/fetchProjectVariantByProjectIDd/${id}/variant`); // Replace with your backend API endpoint
+                const response = await axios.get(`http://localhost:5000/api/projects/fetchProjectVariantByProjectIDd/${id}/variant`); // Replace with your backend API endpoint
                 setProjectVariants(response.data);
             } catch (err) {
                 console.error(err);
@@ -40,7 +40,7 @@ export default function ShortList() {
     useEffect(() => {
         async function fetchData() {
           try {
-            const response = await axios.get('http://82.180.136.42:5000/api/projects/api/count', {
+            const response = await axios.get('http://localhost:5000/api/projects/api/count', {
                 params: { fieldName: 'save', fieldValue: 'yes' },
             });
       
@@ -95,7 +95,7 @@ export default function ShortList() {
                                             <div class="caption_strong_medium ellipsis">In {userObj.locality}, {userObj.city}</div>
                                             {/* <div class="caption_strong_medium ellipsis">Posted by Owner </div> */}
                                         </div>
-                                        <Link to={`/projects/view-details/${userObj._id}/${userObj.builderID}`}>
+                                        <Link to={`/projects/view-details/${userObj.id}/${userObj.builderID}`}>
                                             <button className="shortlist-button">Call To Action</button>
                                         </Link>
                                     </div>

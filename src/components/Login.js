@@ -27,7 +27,7 @@ function Login() {
         event.preventDefault();
     
         const formData = new FormData(event.target);
-        axios.post('http://localhost/api/login.php', formData)
+        axios.post('https://askresidenci.com/login.php', formData)
         .then(response => {
             setFormResponse(response.data.message);
             // setShowOTP(true);
@@ -41,7 +41,7 @@ function Login() {
     const handleUpdate = (event) => {
         event.preventDefault();
     
-        axios.post(`http://localhost/api/update.php?name=${name}&email=${email}&mobileNumber=${mobileNumber}`)
+        axios.post(`https://askresidenci.com/update.php?name=${name}&email=${email}&mobileNumber=${mobileNumber}`)
         .then(response => {
             setFormResponse(response.data.message);
             // setShowOTP(true);
@@ -57,7 +57,7 @@ function Login() {
     const handleOTPVerification = (event) => {
         event.preventDefault();
     
-        const url = `http://localhost/api/verify_otp.php?mobile_number=${mobileNumber}&otp=${otp}`;
+        const url = `https://askresidenci.com/verify_otp.php?mobile_number=${mobileNumber}&otp=${otp}`;
 
         axios
             .post(url)

@@ -6,7 +6,7 @@ export default function ServiceOffering() {
     const responsive = {
         desktop1: {
             breakpoint: { max: 2000, min: 800 },
-            items: 3.8,
+            items: 3.2,
             slidesToSlide: 1 // optional, default to 1.
         },
         desktop: {
@@ -43,28 +43,28 @@ export default function ServiceOffering() {
                     removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
                 >
                     <div className="ServiceOfferingCard">
-                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                        <img src="/dummy-placeholder.png" alt="img" />
                     </div>
                     <div className="ServiceOfferingCard">
-                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                        <img src="/dummy-placeholder.png" alt="img" />
                     </div>
                     <div className="ServiceOfferingCard">
-                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                        <img src="/dummy-placeholder.png" alt="img" />
                     </div>
                     <div className="ServiceOfferingCard">
-                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                        <img src="/dummy-placeholder.png" alt="img" />
                     </div>
                     <div className="ServiceOfferingCard">
-                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                        <img src="/dummy-placeholder.png" alt="img" />
                     </div>
                     <div className="ServiceOfferingCard">
-                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                        <img src="/dummy-placeholder.png" alt="img" />
                     </div>
                     <div className="ServiceOfferingCard">
-                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                        <img src="/dummy-placeholder.png" alt="img" />
                     </div>
                     <div className="ServiceOfferingCard">
-                        <img src="https://www.squareyards.com/cdn-cgi/image/width=660,height=352,quality=80,fit=crop,gravity=auto,format=webp/assets/images/new-our-services/homePage/price-history-banner-v3.png" alt="img" />
+                        <img src="/dummy-placeholder.png" alt="img" />
                     </div>
                 </Carousel>
             </div>

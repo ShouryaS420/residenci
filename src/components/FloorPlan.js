@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function FloorPlan({ img }) {
+export default function FloorPlan({ img, alt }) {
   return (
     <>
       <section id="tab-2BHK">
@@ -10,7 +10,7 @@ export default function FloorPlan({ img }) {
               <img
                 src={img}
                 className="img tfp-1hz12hn"
-                alt="Manhattan at Pride World City Floor Plan: 2 BHK Unit with Built up area of 727 sq.ft 1"
+                alt={alt}
                 decoding="async"
               />
             </div>

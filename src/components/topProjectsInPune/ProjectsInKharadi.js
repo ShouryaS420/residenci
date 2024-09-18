@@ -7,7 +7,7 @@ export default function ProjectsInKharadi() {
     const responsive = {
         desktop: {
             breakpoint: { max: 2000, min: 500 },
-            items: 3.8,
+            items: 3.2,
             slidesToSlide: 1 // optional, default to 1.
         },
         tablet: {
@@ -25,7 +25,7 @@ export default function ProjectsInKharadi() {
     const [trendingProjects, setTrendingProjects] = useState([]);
 
     const fetchData = () => {
-        return fetch("http://82.180.136.42:5000/api/projects/fetchDetailsBySearchLocality")
+        return fetch("https://askresidenci.com/getProjectsDetails.php")
             .then((response) => response.json())
             .then((data) => setTrendingProjects(data));
     }
@@ -50,25 +50,43 @@ export default function ProjectsInKharadi() {
                     removeArrowOnDeviceType={["tablet", "mobile"]}
                 >
                     {trendingProjects.slice(0, 8).map((userObj, index) => {
-                        if (userObj.locality === "Kharadi") {
+                        if (userObj.locality === "Kharadi" || userObj.locality === "kharadi") {
                             return (
                                 <>
-                                    <div className="infoCard">
-                                        <div className="css-fyv0ia">
-                                            <div className="imgDiv">
-                                                <img src={userObj.headImg} alt="img"/>
-                                            </div>
-                                            <div className="info">
-                                                <span className="name">{userObj.ProjectName}</span>
-                                                <div className="address1">{userObj.BHk} BHK Apartments</div>
-                                                <div className="address2">{userObj.locality}, {userObj.city}</div>
-                                                <div className="price">
-                                                    <span className="rupee-icon css-1cqirzg">₹ </span>
-                                                    {userObj.startPrice} - {userObj.EndPrice}
+                                    <div className="css-uwwqev" key={index}>
+                                        <div className="css-tlsx9j">
+                                            <div className="css-7xb9y9">
+                                                <div className="css-11t1kfo">
+                                                    <img className="img css-20rqfc" alt="" decoding="async" src={`${userObj.headImg}`} />
                                                 </div>
-                                                <Link to={`/projects/view-details/${userObj._id}/${userObj.builderID}`} target="_blank">
-                                                    <button className="ViewDetails">View Details</button>
-                                                </Link>
+                                            </div>
+                                            <div className="css-tb68xe">
+                                                <div className="css-gg4vpm">
+                                                    <div className="d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <img src="/developerImg.webp" className="developerImg" alt="Developer Img"/>
+                                                        </div>
+                                                        <div>
+                                                            <span className="css-6yyk38">{userObj.ProjectName}</span>
+                                                            <small className="css-17zjzsz">by {userObj.builderName}</small>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div className="css-yudpbq">
+                                                            <span className="rupee-icon css-1cqirzg">₹ </span>{userObj.startPrice} - {userObj.EndPrice}
+                                                        </div>
+                                                        <div className="css-cedndr">Price</div>
+                                                    </div>
+                                                </div>
+                                                <div className="d-flex align-items-center justify-content-between">
+                                                    <div>
+                                                        <div className="css-1ra0p2p">{userObj.BHk} BHK Apartments</div>
+                                                        <div className="css-1klg0jz">{userObj.locality}, {userObj.city}</div>
+                                                    </div>
+                                                    <Link to={`/projects/view-details/${userObj.id}/${userObj.builderID.slice(1,-1)}`} target="_blank">
+                                                        <button className="ViewDetails">View Details</button>
+                                                    </Link>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
